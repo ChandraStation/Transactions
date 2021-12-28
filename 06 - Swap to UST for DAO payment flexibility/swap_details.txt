@@ -1,0 +1,8 @@
+###########   SWAP to UST   then   SEND UST to OSMO address   ###########
+
+## Estimating the UST out amount for a 2800 OSMO swap in pool 560
+osmosisd q gamm estimate-swap-exact-amount-in 560 osmo1ddvq48lvj7z4kzpzg9fhyls4v2adhpkjnhk5a5 2800000000uosmo --swap-route-pool-ids=560 --swap-route-denoms=ibc/BE1BB42D4BE3C30D50B68D7C41DB4DFCE9678E8EF8C539F6E6A9345048894FCC
+15066978592
+
+## Lowering the minimum out UST value to $14,500 (for 2800 OSMO) just to ensure swap won't fail due to liquidity changes b/w generation and broadcasting same as going heavy on the gas at 2M will need to refine when tx/gas fees are implemented
+osmosisd tx gamm swap-exact-amount-in 2800000000uosmo 14500000000 --swap-route-pool-ids=560 --swap-route-denoms=ibc/BE1BB42D4BE3C30D50B68D7C41DB4DFCE9678E8EF8C539F6E6A9345048894FCC --generate-only --from osmo1ddvq48lvj7z4kzpzg9fhyls4v2adhpkjnhk5a5 --fees 0uosmo --gas-prices 0uosmo --gas 2000000 --memo="Swap to UST for DAO payment flexibility" -o json

@@ -1,0 +1,2 @@
+{"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address":"osmo1ddvq48lvj7z4kzpzg9fhyls4v2adhpkjnhk5a5","to_address":"osmo1dv3v662kd3pp6pxfagck4zyysas82adswgl2jf","amount":[{"denom":"uosmo","amount":"93000000"}]}],"memo":"Meme Comp Payout 1, bulk payout to 3 winners","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
+
